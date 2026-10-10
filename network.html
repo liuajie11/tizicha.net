@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>网络故障排查指南：连不上、变慢、频繁断开 48 问 · 梯子查</title>
+  <meta name="description" content="针对订阅更新失败、连接成功打不开网页、晚高峰速度变慢以及手机频繁掉线 4 大核心网络问题，提供 48 个实战故障排查与修复方案。">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <div class="shell topbar">
+    <a class="brand" href="index.html"><span class="brand-mark">↗</span>梯子查</a>
+    <nav class="nav">
+      <a href="index.html">首页</a>
+      <a href="ladder.html">梯子推荐</a>
+      <a href="airport.html">机场推荐</a>
+      <a href="reviews.html">机场评测</a>
+      <a href="compare.html">机场对比</a>
+      <a href="clients.html">客户端</a>
+      <a class="active" href="network.html">网络问题</a>
+      <a href="ai-tools.html">AI工具</a>
+      <a href="faq.html">机场FAQ</a>
+      <a href="risk.html">风险预警</a>
+    </nav>
+  </div>
+</header>
+
+<main class="shell ai-directory">
+  <section class="page-hero ai-hero">
+    <span class="crumb">首页 / 网络问题排查</span>
+    <div class="ai-hero-grid">
+      <div>
+        <span class="eyebrow">TROUBLESHOOTING GUIDE / 48 SOLUTIONS</span>
+        <h1>连不上、变慢、频繁断开？网络排查 48 问</h1>
+        <p class="lede">按场景精准定位：订阅更新失败、连通无网、晚高峰掉速及手机后台掉线，按图索骥快速恢复网络。</p>
+      </div>
+      <aside class="ai-update-card">
+        <span>涵盖分类</span>
+        <strong>4 大模块</strong>
+        <p>每个核心异常分类均提供 12 个实操问题与精准解决方案，几分钟内解决常见断网难题。</p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 搜索与快捷分类 -->
+  <section class="section ai-tools-section">
+    <div class="section-head ai-section-head">
+      <div>
+        <h2>网络异常分类排查</h2>
+        <p>选择下方问题类别或直接输入关键字搜索解决方案。</p>
+      </div>
+      <div class="ai-search-wrap">
+        <input type="search" id="net-search" class="ai-search" placeholder="搜索网络问题 (如: 系统代理, 晚高峰, 省电模式)..." aria-label="搜索网络故障">
+      </div>
+    </div>
+
+    <div class="ai-filter-bar" id="net-categories">
+      <button class="ai-filter active" data-cat="all">全部问题 (48)</button>
+      <button class="ai-filter" data-cat="net1">一、订阅更新失败 (12)</button>
+      <button class="ai-filter" data-cat="net2">二、连通但打不开网页 (12)</button>
+      <button class="ai-filter" data-cat="net3">三、晚高峰速度变慢 (12)</button>
+      <button class="ai-filter" data-cat="net4">四、手机频繁掉线 (12)</button>
+    </div>
+
+    <div class="faq-list" id="net-container">
+
+      <!-- 模块一：订阅更新失败（检查链接、时间与 DNS）(01 - 12) -->
+      <div class="section-label-block" data-cat-header="net1" style="margin: 28px 0 12px;">
+        <h3 style="font-size: 20px; color: var(--ink); margin:0;">一、订阅更新失败（检查链接、时间与 DNS）</h3>
+      </div>
+
+      <details class="faq-item" data-cat="net1">
+        <summary><b>01</b><span>为什么点击“更新订阅”时提示“连接超时（Timeout）”？</span><i>+</i></summary>
+        <p><b>原因：</b>本地网络无法直接连接到机场的订阅服务器域名，通常是因为域名被污染、旧代理环境拦截或本地 DNS 解析失败。<br><b>解决办法：</b>① 勾选客户端中的“通过代理更新订阅”（或开启已有可用节点更新）；② 检查机场官网是否发布了新的订阅备用域名；③ 手动修改本地 DNS 为 223.5.5.5 或 1.1.1.1。</p>
+      </details>
+      <details class="faq-item" data-cat="net1">
+        <summary><b>02</b><span>为什么更新订阅显示“404 Not Found”或“500 Internal Server Error”？</span><i>+</i></summary>
+        <p><b>原因：</b>404 表示订阅 URL 路径不正确或已失效；500 表示机场后端服务器数据库突发故障或在维护中。<br><b>解决办法：</b>登录机场后台重新复制最新的订阅链接，粘贴到客户端；如果依然提示 500，请等待 10-30 分钟或查看机场 Telegram 交流群维护公告。</p>
+      </details>
+      <details class="faq-item" data-cat="net1">
+        <summary><b>03</b><span>为什么提示“证书验证失败 / SSL Handshake Failed”？</span><i>+</i></summary>
+        <p><b>原因：</b>本地设备系统时间不准确，或网络被中间人劫持/安全软件解密加密流量导致的证书信任链中断。<br><b>解决办法：</b>① 校准系统时间精准至秒；② 在客户端订阅设置中临时开启“跳过证书检查（AllowInsecure / Skip Cert Verify）”；③ 暂时关闭杀毒软件的 HTTPS 扫描功能。</p>
+      </details>
+      <details class="faq-item" data-cat="net1">
+        <summary><b>04</b><span>系统时间不准确会怎样导致订阅更新失败？如何同步？</span><i>+</i></summary>
+        <p><b>原因：</b>HTTPS 传输要求客户端时间与服务器时间差不能超过几秒，时间不准会导致 SSL 握手直接被拒。<br><b>解决办法：</b>进入系统“日期与时间设置”，开启“自动设置时间”并点击“立即同步”。</p>
+      </details>
+      <details class="faq-item" data-cat="net1">
+        <summary><b>05</b><span>本地 DNS 污染如何影响订阅更新？怎样修改为公共 DNS？</span><i>+</i></summary>
+        <p><b>原因：</b>国内运营商 DNS 可能会将机场域名解析到错误的无效 IP 地址。<br><b>解决办法：</b>在电脑或手机网络设置中，将 DNS 手动指定为阿里 DNS（223.5.5.5）或 DNSPod（119.29.29.29）。</p>
+      </details>
+      <details class="faq-item" data-cat="net1">
+        <summary><b>06</b><span>为什么旧的代理开启时，新订阅反而更新不了？</span><i>+</i></summary>
+        <p><b>原因：</b>旧节点已经失效或无法连接订阅域名，但客户端将更新请求送入了旧代理管道。<br><b>解决办法：</b>先完全关闭代理软件，改用本地直连网络更新订阅；或将更新请求模式切换为“直连更新”。</p>
+      </details>
+      <details class="faq-item" data-cat="net1">
+        <summary><b>07</b><span>机场域名被污染或封锁后，如何拉取最新的订阅地址？</span><i>+</i></summary>
+        <p><b>解决办法：</b>① 登录机场最新发布的防封短链/发布页；② 查看机场 Telegram 官方频道固定消息；③ 使用机场后台提供的“防污染转换链接”。</p>
+      </details>
+      <details class="faq-item" data-cat="net1">
+        <summary><b>08</b><span>订阅转换链接打不开或更新报错怎么排查？</span><i>+</i></summary>
+        <p><b>原因：</b>第三方订阅转换公共后端服务器宕机或被封锁。<br><b>解决办法：</b>切换为机场官方提供的直连订阅，或更换其他知名的转换后端（如 sub.id9.cc / sub.mahedx.top）。</p>
+      </details>
+      <details class="faq-item" data-cat="net1">
+        <summary><b>09</b><span>客户端提示“配置解析失败 / Invalid YAML Config”怎么解决？</span><i>+</i></summary>
+        <p><b>原因：</b>机场返回的内容非标准配置文本（例如返回了网页 HTML 错误提示框，或套餐被禁用提醒）。<br><b>解决办法：</b>在浏览器打开订阅链接查看返回文本；若显示为 HTML 代码说明账号有问题或域名被拦截。</p>
+      </details>
+      <details class="faq-item" data-cat="net1">
+        <summary><b>10</b><span>安全软件（如 360、火绒、Windows Defender）阻止订阅下载怎么处理？</span><i>+</i></summary>
+        <p><b>原因：</b>部分安全软件会将未签名的规则下载行为误报为潜在风险。<br><b>解决办法：</b>将 Clash / Shadowrocket / Sing-box 的工作目录及应用添加到安全软件的信任白名单中。</p>
+      </details>
+      <details class="faq-item" data-cat="net1">
+        <summary><b>11</b><span>使用公司 / 校园网等限制网络时，订阅更新失败如何解决？</span><i>+</i></summary>
+        <p><b>原因：</b>企业/学校防火墙拦截了非标端口或特定代理域名的 HTTP 请求。<br><b>解决办法：</b>手机开启 5G/4G 移动热点，将电脑连接手机热点完成订阅更新后再切回公司网络。</p>
+      </details>
+      <details class="faq-item" data-cat="net1">
+        <summary><b>12</b><span>为什么账号欠费或过期后，订阅链接无法再次更新？</span><i>+</i></summary>
+        <p><b>原因：</b>机场 API 检测到账号配额耗尽或状态为 Expired，自动关闭了订阅获取接口。<br><b>解决办法：</b>登录机场控制台重新续费或购买流量包，完成结算后再刷新订阅即可恢复。</p>
+      </details>
+
+      <!-- 模块二：连接成功但打不开网页（检查系统代理与分流模式）(13 - 24) -->
+      <div class="section-label-block" data-cat-header="net2" style="margin: 38px 0 12px;">
+        <h3 style="font-size: 20px; color: var(--ink); margin:0;">二、连接成功但打不开网页（检查系统代理与分流模式）</h3>
+      </div>
+
+      <details class="faq-item" data-cat="net2">
+        <summary><b>13</b><span>为什么客户端显示“连通性良好 / Ping 值正常”，但浏览器网页打不开？</span><i>+</i></summary>
+        <p><b>原因：</b>Ping 仅仅测试了中转入口连通性，并不代表海外落地节点能够正常连通目标网站或 DNS 解析正确。<br><b>解决办法：</b>① 检查客户端是否勾选了“系统代理（System Proxy）”；② 切换其他地区的节点测试；③ 重启代理软件内核。</p>
+      </details>
+      <details class="faq-item" data-cat="net2">
+        <summary><b>14</b><span>什么是“系统代理（System Proxy）”？没勾选系统代理会发生什么？</span><i>+</i></summary>
+        <p><b>原因：</b>代理软件必须接管 Windows/macOS 的网络流量开关（即系统代理）。<br><b>解决办法：</b>未勾选时，软件虽然后台运行但浏览器不会走代理。请确保 Clash / Sing-box 的“System Proxy / 系统代理”开关已保持开启。</p>
+      </details>
+      <details class="faq-item" data-cat="net2">
+        <summary><b>15</b><span>为什么能打开 Google/YouTube，却打不开百度/微信等国内网站？</span><i>+</i></summary>
+        <p><b>原因：</b>误将分流模式设置为了“全局模式（Global）”，导致国内流量也绕道国外节点，被国内网站风控或拒绝响应。<br><b>解决办法：</b>将代理模式从“全局（Global）”切换回“规则模式（Rule）”。</p>
+      </details>
+      <details class="faq-item" data-cat="net2">
+        <summary><b>16</b><span>为什么能打开国内网站，却打不开任何国外网站？</span><i>+</i></summary>
+        <p><b>原因：</b>所选代理节点已被目标平台屏蔽，或客户端中的域名 DNS 映射（GEOIP / GEOSITE）数据库损坏。<br><b>解决办法：</b>更换节点测试；在客户端设置中更新 GEOIP 与 GEOSITE 路由规则数据库。</p>
+      </details>
+      <details class="faq-item" data-cat="net2">
+        <summary><b>17</b><span>为什么全局模式（Global）能上网，但规则模式（Rule）打不开网页？</span><i>+</i></summary>
+        <p><b>原因：</b>规则配置文件损毁或策略组匹配错误（如代理策略组误选为了 Direct 直连）。<br><b>解决办法：</b>检查客户端“策略组”下的节点分配，确保主代理策略组指向了可用的国外节点。</p>
+      </details>
+      <details class="faq-item" data-cat="net2">
+        <summary><b>18</b><span>为什么切换了节点之后，浏览器需要刷新好几次才能生效？</span><i>+</i></summary>
+        <p><b>原因：</b>浏览器保持了 HTTP Keep-Alive 旧连接长连接，或者本地 DNS 缓存未及时刷新。<br><b>解决办法：</b>在客户端中点击“清除连接（Flush Connections / Close All Connections）”或重新打开浏览器窗口。</p>
+      </details>
+      <details class="faq-item" data-cat="net2">
+        <summary><b>19</b><span>浏览器安装了 Proxy SwitchyOmega 等插件引发的冲突如何解决？</span><i>+</i></summary>
+        <p><b>原因：</b>浏览器插件与 Clash 系统代理抢占本地 7890 端口。<br><b>解决办法：</b>将 SwitchyOmega 设置为“使用系统代理”，或直接禁用 SwitchyOmega 插件，完全交由 Clash 托管。</p>
+      </details>
+      <details class="faq-item" data-cat="net2">
+        <summary><b>20</b><span>关闭 Clash/小火箭等软件后，电脑整个网络断网打不开任何网页怎么恢复？</span><i>+</i></summary>
+        <p><b>原因：</b>软件非正常关机或崩溃导致 Windows 系统代理注册表残留，网络流量被强行发往已关闭的本地 7890 端口。<br><b>解决办法：</b>进入 Windows“设置 -> 网络和 Internet -> 代理”，将“使用代理服务器”手动关闭即可立即恢复。</p>
+      </details>
+      <details class="faq-item" data-cat="net2">
+        <summary><b>21</b><span>为什么浏览器提示“ERR_PROXY_CONNECTION_FAILED”？</span><i>+</i></summary>
+        <p><b>原因：</b>浏览器尝试连接本地代理端口（如 127.0.0.1:7890），但代理软件并未启动或端口配置不一致。<br><b>解决办法：</b>启动代理软件，或检查代理软件设置中的端口是否与浏览器配置一致。</p>
+      </details>
+      <details class="faq-item" data-cat="net2">
+        <summary><b>22</b><span>什么是 TUN 模式？为什么打不开网页时开启 TUN 模式管用？</span><i>+</i></summary>
+        <p><b>原因：</b>部分软件（如 UWP 应用、命令行、Terminal）不遵循系统代理设置。<br><b>解决办法：</b>在 Clash / Sing-box 中开启“TUN 模式（虚拟网卡模式）”，强行在操作系统网络层拦截全盘流量。</p>
+      </details>
+      <details class="faq-item" data-cat="cat2">
+        <summary><b>23</b><span>路由器开着代理与电脑客户端代理发生双重冲突怎么排查？</span><i>+</i></summary>
+        <p><b>原因：</b>主路由 / 旁路由代理策略与本地电脑客户端代理规则发生双重 NAT 加密环路。<br><b>解决办法：</b>若路由器已开启全家代理，电脑客户端保持直连模式即可；或者关闭路由器代理，由电脑单独控制。</p>
+      </details>
+      <details class="faq-item" data-cat="net2">
+        <summary><b>24</b><span>IPv6 开启导致部分网页加载缓慢或打不开怎么解决？</span><i>+</i></summary>
+        <p><b>原因：</b>国内部分宽带开启了 IPv6，但机场节点仅支持 IPv4，导致浏览器优先尝试 IPv6 握手失败超时。<br><b>解决办法：</b>在客户端中关闭“IPv6 选项”或在电脑网卡属性中取消勾选“Internet 协议版本 6 (TCP/IPv6)”。</p>
+      </details>
+
+      <!-- 模块三：晚高峰速度变慢（切换线路并对比测速）(25 - 36) -->
+      <div class="section-label-block" data-cat-header="net3" style="margin: 38px 0 12px;">
+        <h3 style="font-size: 20px; color: var(--ink); margin:0;">三、晚高峰速度变慢（切换线路并对比测速）</h3>
+      </div>
+
+      <details class="faq-item" data-cat="net3">
+        <summary><b>25</b><span>为什么白天速度极快，到了晚上 8点~11点 视频就开始频繁缓冲？</span><i>+</i></summary>
+        <p><b>原因：</b>晚高峰（20:00 - 23:00）是全国民用互联网国际出口公网拥堵最高峰，普通直连或廉价中转线路面临严重掉包。<br><b>解决办法：</b>① 切换至专门的晚高峰备用节点；② 使用 IEPL 专线机场；③ 避开热门的香港节点，改用冷门地区。</p>
+      </details>
+      <details class="faq-item" data-cat="net3">
+        <summary><b>26</b><span>晚高峰期什么是国际出口公网拥堵？</span><i>+</i></summary>
+        <p><b>原因：</b>电信、联通、移动的国际出口骨干网总带宽有限。晚高峰时数千万人同时使用国际带宽，导致公网链路满载掉包率激增至 30% 以上。</p>
+      </details>
+      <details class="faq-item" data-cat="net3">
+        <summary><b>27</b><span>怎么判断晚高峰变慢是本地宽带问题还是机场节点问题？</span><i>+</i></summary>
+        <p><b>测试方法：</b>关闭代理，直接打开国内 Speedtest 测本地宽带速度；若本地跑满千兆但开启代理后极慢，说明是机场节点或跨境公网链路拥堵。</p>
+      </details>
+      <details class="faq-item" data-cat="net3">
+        <summary><b>28</b><span>为什么专线（IEPL/IPLC）在晚高峰期依然能维持满速？</span><i>+</i></summary>
+        <p><b>原理：</b>专线传输走的是企业租用的内网光纤，不经过公网海缆与 GFW 审查，完全隔离了公网拥堵，因此晚高峰保持率通常超过 90%。</p>
+      </details>
+      <details class="faq-item" data-cat="net3">
+        <summary><b>29</b><span>晚高峰期应该优先选择哪个地区的节点（香港/日本/新加坡/美国）？</span><i>+</i></summary>
+        <p><b>推荐策略：</b>香港节点在晚高峰最易过载；建议优先尝试<b>日本（JP）</b>、<b>新加坡（SG）</b>或<b>台湾（TW）</b>节点，通常带宽更充裕。</p>
+      </details>
+      <details class="faq-item" data-cat="net3">
+        <summary><b>30</b><span>如何使用测速工具（Speedtest / 节点测速）科学对比晚高峰性能？</span><i>+</i></summary>
+        <p><b>步骤：</b>在晚高峰 21:00 打开 Speedtest.net 或 Fast.com，固定测速服务器为美国洛杉矶或东京，记录各节点的真实下载速率与丢包率。</p>
+      </details>
+      <details class="faq-item" data-cat="net3">
+        <summary><b>31</b><span>单线程下载速度慢、多线程测速却很快是什么原因？</span><i>+</i></summary>
+        <p><b>原因：</b>说明线路延迟高或存在微小掉包，但总带宽尚可。4K 视频依赖单线程流畅度，因此单线程表现比多线程更有实际意义。</p>
+      </details>
+      <details class="faq-item" data-cat="net3">
+        <summary><b>32</b><span>节点倍率高的节点在晚高峰一定比 1x 节点更快吗？</span><i>+</i></summary>
+        <p><b>不一定：</b>高倍率节点通常人少成本高，但也可能是机场设置的消费壁垒。需实际对比该高倍率节点是否为专线独立出口。</p>
+      </details>
+      <details class="faq-item" data-cat="net3">
+        <summary><b>33</b><span>为什么晚高峰播放 4K 视频会频繁降码率到 480p/720p？</span><i>+</i></summary>
+        <p><b>原因：</b>YouTube / Netflix 探测到当前的持续单线程吞吐能力下降，为了避免卡顿自动下调了视频清晰度。<br><b>解决办法：</b>手动锁定 4K 画质并切换到带宽更高的节点。</p>
+      </details>
+      <details class="faq-item" data-cat="net3">
+        <summary><b>34</b><span>Hysteria 2 / TUIC 协议在晚高峰高掉包环境下的优势是什么？</span><i>+</i></summary>
+        <p><b>原理：</b>HY2 采用基于 UDP 的拥堵控制算法，能在高达 30% 掉包的劣质公网线路上强制发包拉满速度，非常适合晚高峰救急。</p>
+      </details>
+      <details class="faq-item" data-cat="net3">
+        <summary><b>35</b><span>运营商（电信/联通/移动）对晚高峰跨境流量限制如何避坑？</span><i>+</i></summary>
+        <p><b>经验：</b>移动 CMI 线路适合移动宽带，电信用户选 CN2/GIA 或专线，联通用户选 9929/4837；跨运营商混用在晚高峰极易减速。</p>
+      </details>
+      <details class="faq-item" data-cat="net3">
+        <summary><b>36</b><span>晚高峰期间机场节点频繁被提示“负载过高”该怎么应对？</span><i>+</i></summary>
+        <p><b>解决办法：</b>避开列表顶部的默认 01/02 节点，往下滑动选择序号较靠后（如 15-20）的节点，通常使用人数更少。</p>
+      </details>
+
+      <!-- 模块四：手机频繁掉线（关闭省电限制与按需连接）(37 - 48) -->
+      <div class="section-label-block" data-cat-header="net4" style="margin: 38px 0 12px;">
+        <h3 style="font-size: 20px; color: var(--ink); margin:0;">四、手机频繁掉线（关闭省电限制与按需连接）</h3>
+      </div>
+
+      <details class="faq-item" data-cat="net4">
+        <summary><b>37</b><span>为什么手机锁屏一段时间后，后台代理就会自动中断连接？</span><i>+</i></summary>
+        <p><b>原因：</b>手机操作系统（如 iOS / 华为鸿蒙 / 小米 HyperOS）在锁屏后为了省电，会自动强行挂起或杀掉后台高功耗的代理进程。<br><b>解决办法：</b>将代理软件加入“后台运行白名单”并关闭省电优化。</p>
+      </details>
+      <details class="faq-item" data-cat="net4">
+        <summary><b>38</b><span>安卓系统（华为/小米/OPPO/VIVO）如何关闭客户端的后台省电优化与杀进程？</span><i>+</i></summary>
+        <p><b>步骤：</b>① 进入系统设置 -> 应用管理 -> 选择代理软件 -> 电池；② 将后台策略修改为“无限制 / 允许后台高耗电”；③ 在多任务后台管理界面将软件加锁锁定。</p>
+      </details>
+      <details class="faq-item" data-cat="net4">
+        <summary><b>39</b><span>iOS 苹果手机（Shadowrocket/Stash）频繁断连、通知中断怎么解决？</span><i>+</i></summary>
+        <p><b>原因：</b>iOS 内存不足时优先清理 Network Extension 网络拓展。<br><b>解决办法：</b>在小火箭设置中开启“按需连接（On Demand）”；并在设置中开启“保持存活（Keep-Alive）”。</p>
+      </details>
+      <details class="faq-item" data-cat="net4">
+        <summary><b>40</b><span>什么是 iOS 的“按需连接（Connect On Demand）”功能？</span><i>+</i></summary>
+        <p><b>原理：</b>按需连接是 iOS 系统级代理守护机制。一旦代理进程被系统杀掉或断开，系统会自动无感重新重新拉起 VPN 连接。</p>
+      </details>
+      <details class="faq-item" data-cat="net4">
+        <summary><b>41</b><span>手机从 Wi-Fi 切换到 5G/4G 移动网络时，代理失效或需要重新开关怎么处理？</span><i>+</i></summary>
+        <p><b>原因：</b>网络网卡 IP 改变导致本地 UDP 握手 Socket 断开。<br><b>解决办法：</b>开启客户端中的“网络变更自动重连（Auto Reconnect on Network Change）”功能。</p>
+      </details>
+      <details class="faq-item" data-cat="net4">
+        <summary><b>42</b><span>为什么手机开启热点共享给电脑后，电脑连不上节点或掉线？</span><i>+</i></summary>
+        <p><b>原因：</b>手机系统默认不会将热点共享管道的流量路由给代理软件。<br><b>解决办法：</b>在安卓代理软件中开启“允许局域网连接（Allow LAN）”或使用支持 TUN 模式的客户端。</p>
+      </details>
+      <details class="faq-item" data-cat="net4">
+        <summary><b>43</b><span>手机电池电量低开启“省电模式”时，代理为什么会自动终止？</span><i>+</i></summary>
+        <p><b>原因：</b>“超级省电模式”会强行切断所有后台网络连接与 CPU 唤醒。<br><b>解决办法：</b>在省电模式例外应用列表中勾选代理应用，或避免在低电量下进行大流量传输。</p>
+      </details>
+      <details class="faq-item" data-cat="net4">
+        <summary><b>44</b><span>苹果系统内 VPN 机制与其他安全软件（如网络守护/拦截器）冲突怎么解决？</span><i>+</i></summary>
+        <p><b>原因：</b>iOS 系统同一时刻只允许一个主 Network Extension VPN 运行。<br><b>解决办法：</b>卸载或关闭其他占用 VPN 管道的广告拦截软件或网络监控工具。</p>
+      </details>
+      <details class="faq-item" data-cat="net4">
+        <summary><b>45</b><span>为什么安卓手机系统提示“网络受限”或弹出“无互联网连接”警告？</span><i>+</i></summary>
+        <p><b>原因：</b>安卓系统原生captive portal 验证连到了 Google 官方服务器，开启代理时若该请求超时则误判为无网。<br><b>解决办法：</b>忽略该误报警告，或在代理软件中将 `connectivitycheck.gstatic.com` 设为 Direct 直连。</p>
+      </details>
+      <details class="faq-item" data-cat="net4">
+        <summary><b>46</b><span>手机内存（RAM）不足导致代理客户端在后台被系统强制杀掉怎么处理？</span><i>+</i></summary>
+        <p><b>解决办法：</b>定期清理后台不常用的重度应用（如大型游戏、视频软件），减少代理软件被 Low Memory Killer (LMK) 杀掉的概率。</p>
+      </details>
+      <details class="faq-item" data-cat="net4">
+        <summary><b>47</b><span>自动切换节点策略（UrlTest）导致手机频繁断流切换如何固定节点？</span><i>+</i></summary>
+        <p><b>解决办法：</b>在客户端策略组中，将策略模式从“自动选择（UrlTest / Auto）”修改为手动指定固定节点。</p>
+      </details>
+      <details class="faq-item" data-cat="net4">
+        <summary><b>48</b><span>手机系统升级（如 iOS 18 / 鸿蒙 / Android 15）后代理频繁崩溃怎么办？</span><i>+</i></summary>
+        <p><b>解决办法：</b>系统升级后 API 可能发生变更。请进入 App Store 或 GitHub 将代理客户端更新到支持最新系统内核的稳定新版本。</p>
+      </details>
+
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="shell footer-line">
+    <span>© <span data-year></span> 梯子查</span>
+    <span>先排查，再更换</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+  // 网络问题筛选与搜索逻辑
+  document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('net-search');
+    const categoryBtns = document.querySelectorAll('#net-categories .ai-filter');
+    const faqItems = document.querySelectorAll('#net-container .faq-item');
+    const headers = document.querySelectorAll('#net-container .section-label-block');
+
+    let currentCat = 'all';
+
+    function filterNetworkIssues() {
+      const query = searchInput.value.trim().toLowerCase();
+
+      faqItems.forEach(item => {
+        const matchesCat = (currentCat === 'all' || item.dataset.cat === currentCat);
+        const text = item.textContent.toLowerCase();
+        const matchesQuery = !query || text.includes(query);
+
+        if (matchesCat && matchesQuery) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+
+      // 标题显示逻辑
+      headers.forEach(header => {
+        if (currentCat === 'all' && !query) {
+          header.style.display = 'block';
+        } else if (currentCat !== 'all' && header.dataset.catHeader === currentCat && !query) {
+          header.style.display = 'block';
+        } else {
+          header.style.display = 'none';
+        }
+      });
+    }
+
+    categoryBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+        categoryBtns.forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        currentCat = this.dataset.cat;
+        filterNetworkIssues();
+      });
+    });
+
+    searchInput.addEventListener('input', filterNetworkIssues);
+  });
+</script>
+</body>
+</html>

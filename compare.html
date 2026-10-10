@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>机场对比：14 家机场参数逐项横向对比表 · 梯子查</title>
+  <meta name="description" content="收录的 14 家机场共用同一份数据，放在一张表逐项比较最低价格、主打套餐、每 GB 单价、线路类型、协议、节点、AI 与流媒体解锁，自动高亮最低单价。">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <div class="shell topbar">
+    <a class="brand" href="index.html"><span class="brand-mark">↗</span>梯子查</a>
+    <nav class="nav">
+      <a href="index.html">首页</a>
+      <a href="ladder.html">梯子推荐</a>
+      <a href="airport.html">机场推荐</a>
+      <a href="reviews.html">机场评测</a>
+      <a class="active" href="compare.html">机场对比</a>
+      <a href="clients.html">客户端</a>
+      <a href="network.html">网络问题</a>
+      <a href="ai-tools.html">AI工具</a>
+      <a href="faq.html">机场FAQ</a>
+      <a href="risk.html">风险预警</a>
+    </nav>
+  </div>
+</header>
+
+<main class="shell ladder-directory">
+  <!-- 页面 Hero 区块 -->
+  <section class="page-hero ladder-hero">
+    <span class="crumb">首页 / 机场对比</span>
+    <div class="ladder-hero-grid">
+      <div>
+        <span class="eyebrow">AIRPORT COMPARISON MATRIX / 2026</span>
+        <h1>机场对比：14 家机场参数逐项对比</h1>
+        <p class="lede">收录的 14家机场共用同一份数据，这里把它们放进一张表逐项比。默认显示全部，勾掉不想看的即可；单价最低的一格会高亮。想看某一家的完整分析去 <a href="reviews.html" style="color:#128db5;font-weight:750;text-decoration:underline;">机场评测</a>；想直接要结论看 <a href="airport.html" style="color:#128db5;font-weight:750;text-decoration:underline;">机场推荐</a>。</p>
+      </div>
+      <aside class="ladder-summary-card">
+        <span>数据联动</span>
+        <strong>14 家</strong>
+        <p>支持自由勾选隐藏/显示指定机场，实时动态高亮当前对比中的最低单价。</p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 内部链接引导区 -->
+  <section class="section" style="padding-bottom: 20px;">
+    <div class="ai-quick-note">
+      <div>
+        <b>读详细评测</b>
+        <span>想看单家机场独立分析？看 <a href="reviews.html" style="color:#128db5;font-weight:750;">14家机场深度评测</a>。</span>
+      </div>
+      <div>
+        <b>看场景结论</b>
+        <span>新手/低预算选哪家？去 <a href="airport.html" style="color:#128db5;font-weight:750;">机场按需求推荐</a> 或 <a href="ladder.html" style="color:#128db5;font-weight:750;">梯子对比</a>。</span>
+      </div>
+      <div>
+        <b>看软件导入</b>
+        <span>已买机场怎么配置？查看 <a href="clients.html" style="color:#128db5;font-weight:750;">客户端指南</a> 与 <a href="network.html" style="color:#128db5;font-weight:750;">网络排查</a>。</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 勾选过滤与对比表区 -->
+  <section class="section">
+    <div class="compare-filter-wrap">
+      <div class="compare-filter-head">
+        <strong>勾选/取消勾选要对比的机场（默认全选）：</strong>
+        <div class="compare-filter-actions">
+          <button type="button" id="select-all-btn">全选</button>
+          <button type="button" id="select-none-btn">全不选</button>
+          <button type="button" id="reset-default-btn">恢复默认</button>
+        </div>
+      </div>
+      <div class="compare-checkboxes" id="compare-checkboxes">
+        <!-- 动态生成勾选框 -->
+      </div>
+    </div>
+
+    <!-- 动态渲染的对比矩阵表格 -->
+    <div id="compare-table-container"></div>
+  </section>
+
+  <!-- 选型建议卡片区 -->
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <h2>横向对比选型避坑技巧</h2>
+        <p>参数不是唯一指标，结合本地网络与真实体验更重要。</p>
+      </div>
+    </div>
+    <div class="grid">
+      <article class="card">
+        <div class="card-icon">01</div>
+        <h3>关注每 GB 实际单价</h3>
+        <p>不要只看总价，将月费除以月流量得出每 GB 单价（表格已为你自动高亮最具性价比项）。建议轻度用户选择低单价或不限时套餐。</p>
+        <a class="card-arrow" href="faq.html">看流量计费 FAQ →</a>
+      </article>
+      <article class="card">
+        <div class="card-icon">02</div>
+        <h3>认准 IEPL / IPLC 专线</h3>
+        <p>BGP 直连在晚高峰易受公网拥堵影响；重视晚高峰 4K 播放、游戏与 AI 办公的用户，优先选择 IEPL 专线或双入口冗余专线。</p>
+        <a class="card-arrow" href="network.html#net3">看晚高峰排查 →</a>
+      </article>
+      <article class="card">
+        <div class="card-icon">03</div>
+        <h3>确认 AI 与流媒体解锁</h3>
+        <p>不同机场节点出口的风控评级不同，ChatGPT、Claude 与 Netflix 解锁差异较大，核心需求用户建议选择已统一打通解锁的机场。</p>
+        <a class="card-arrow" href="ai-tools.html">看 AI 解锁指南 →</a>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="shell footer-line">
+    <span>© <span data-year></span> 梯子查</span>
+    <span>数据基于公开信息整理，购买前请以官网结算页为准</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script src="compare.js"></script>
+</body>
+</html>

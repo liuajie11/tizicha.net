@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>20 个主流 AI 工具官网与访问指南 · 梯子查</title>
+  <meta name="description" content="整理 20 个主流 AI 工具的官网入口、开发者、主要用途、可用平台、地区与网络环境要求，以及常见登录和访问问题。">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <div class="shell topbar">
+    <a class="brand" href="index.html"><span class="brand-mark">↗</span>梯子查</a>
+    <nav class="nav"><a href="index.html">首页</a><a href="ladder.html">梯子推荐</a><a href="airport.html">机场推荐</a><a href="reviews.html">机场评测</a><a href="compare.html">机场对比</a><a href="clients.html">客户端</a><a href="network.html">网络问题</a><a class="active" href="ai-tools.html">AI工具</a><a href="faq.html">机场FAQ</a><a href="risk.html">风险预警</a></nav>
+  </div>
+</header>
+
+<main class="shell ai-directory">
+  <section class="page-hero ai-hero">
+    <span class="crumb">首页 / AI工具 / 主流工具导航</span>
+    <div class="ai-hero-grid">
+      <div>
+        <span class="eyebrow">2026 主流 AI 工具导航</span>
+        <h1>20 个 AI 工具，官网、平台与访问要求一次看清。</h1>
+        <p class="lede">快速进入官方网站，也可以查看本站对应的使用教程与问题排查专题。不同服务在地区支持、账号注册、IP 环境和客户端连接方式方面存在差异，本页只做资料与合规使用环境导航。</p>
+      </div>
+      <aside class="ai-update-card">
+        <span>资料更新时间</span>
+        <strong>2026-10-10</strong>
+        <p>“主流”按用户关注度、产品影响力与典型使用场景综合整理，不代表严格流量排名。</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="ai-quick-note" aria-label="使用提示">
+    <div><b>01</b><span><strong>先确认地区支持</strong>官网能打开，不等于账号、订阅或某项模型功能在当地开放。</span></div>
+    <div><b>02</b><span><strong>保持账号环境稳定</strong>频繁切换国家、IP、时区或支付地区，容易触发验证和风控。</span></div>
+    <div><b>03</b><span><strong>只从官方入口下载</strong>警惕仿冒网站、代充、共享账号与要求安装未知证书的客户端。</span></div>
+  </section>
+
+  <section class="section ai-tools-section">
+    <div class="section-head ai-section-head">
+      <div><h2>主流 AI 工具</h2><p>可按类别筛选，或搜索工具名、开发者和用途。</p></div>
+      <div class="ai-search-wrap"><label class="sr-only" for="ai-search">搜索 AI 工具</label><input id="ai-search" class="ai-search" type="search" placeholder="搜索 ChatGPT、视频、编程…" autocomplete="off"></div>
+    </div>
+    <div class="ai-filter-bar" id="ai-filters" aria-label="工具分类筛选"></div>
+    <div class="ai-result-meta"><span id="ai-result-count">20 个工具</span><span>官网链接将在新窗口打开</span></div>
+    <div class="ai-tool-grid" id="ai-tool-grid"></div>
+    <div class="ai-empty" id="ai-empty" hidden>没有找到匹配的工具，试试“写作”“视频”或“编程”。</div>
+  </section>
+
+  <section class="section" id="access-guide">
+    <div class="section-head"><div><h2>访问前的通用检查</h2><p>多数“打不开”并不是模型故障，而是地区、账号或浏览器环境不一致。</p></div></div>
+    <div class="ai-guide-grid">
+      <article class="card"><div class="card-icon">◎</div><h3>地区与账号</h3><p>查看官方支持地区；确认手机号、应用商店、账单地址和团队管理员策略。不要用虚假身份信息绕过服务限制。</p></article>
+      <article class="card"><div class="card-icon">↗</div><h3>网络与浏览器</h3><p>保证 HTTPS、WebSocket、登录回调和静态资源可正常加载；检查 DNS、系统时间、Cookie、脚本拦截和企业代理。</p></article>
+      <article class="card"><div class="card-icon">▣</div><h3>客户端与更新</h3><p>从官网或官方应用商店安装。桌面端登录失败时，先确认默认浏览器能否完成授权并返回客户端。</p></article>
+      <article class="card"><div class="card-icon">!</div><h3>订阅与风控</h3><p>支付卡发行地、账单地区和账号地区不一致，可能导致扣款失败；共享账号和频繁切换环境也可能触发验证。</p></article>
+    </div>
+  </section>
+
+  <section class="section ai-common-issues">
+    <div class="section-head"><div><h2>常见访问问题</h2><p>先做无风险排查，再查看每个工具的专页。</p></div></div>
+    <div class="faq-list">
+      <details><summary><b>01</b><span>官网能打开，但登录后一直转圈</span><i>＋</i></summary><p>允许必要 Cookie 和 JavaScript，关闭会改写网页的扩展，校准系统时间，并确认登录域、验证码域与回调地址没有被拦截。</p></details>
+      <details><summary><b>02</b><span>网页可用，客户端却无法登录</span><i>＋</i></summary><p>客户端通常会调用默认浏览器完成 OAuth 授权。更新客户端，允许浏览器打开自定义协议，并检查企业防火墙是否拦截登录回调。</p></details>
+      <details><summary><b>03</b><span>上传文件、生成图片或视频总失败</span><i>＋</i></summary><p>检查文件格式与大小，关闭浏览器数据压缩，确认上传域名和 CDN 可访问；大文件还需要稳定上行、较低丢包和足够等待时间。</p></details>
+      <details><summary><b>04</b><span>同一工具，别人有新功能而我没有</span><i>＋</i></summary><p>新功能经常按地区、套餐、账号批次、年龄或组织策略逐步开放。以账号内实际显示和官方公告为准，不要把灰度差异当成网络故障。</p></details>
+    </div>
+  </section>
+</main>
+
+<footer><div class="shell footer-line"><span>© <span data-year></span> 梯子查</span><span>官方入口优先 · 地区政策以服务商最新说明为准</span></div></footer>
+<script src="script.js"></script>
+<script src="ai-tools/tools-data.js"></script>
+<script src="ai-tools/index.js"></script>
+</body>
+</html>

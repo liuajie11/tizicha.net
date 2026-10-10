@@ -1,0 +1,544 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>机场 FAQ 大全：100 个常见问题与解答 · 梯子查</title>
+  <meta name="description" content="收录 100 个市面上最常见的机场与梯子使用问题：覆盖线路专线、协议选择、客户端配置、流媒体与 AI 解锁、套餐计费及故障排查。">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <div class="shell topbar">
+    <a class="brand" href="index.html"><span class="brand-mark">↗</span>梯子查</a>
+    <nav class="nav">
+      <a href="index.html">首页</a>
+      <a href="ladder.html">梯子推荐</a>
+      <a href="airport.html">机场推荐</a>
+      <a href="reviews.html">机场评测</a>
+      <a href="compare.html">机场对比</a>
+      <a href="clients.html">客户端</a>
+      <a href="network.html">网络问题</a>
+      <a href="ai-tools.html">AI工具</a>
+      <a class="active" href="faq.html">机场FAQ</a>
+      <a href="risk.html">风险预警</a>
+    </nav>
+  </div>
+</header>
+
+<main class="shell ai-directory">
+  <section class="page-hero ai-hero">
+    <span class="crumb">首页 / 机场 FAQ</span>
+    <div class="ai-hero-grid">
+      <div>
+        <span class="eyebrow">KNOWLEDGE BASE / 100 QUESTIONS</span>
+        <h1>机场 FAQ 大全：100 个常见问题解答</h1>
+        <p class="lede">汇总新手入门、线路原理、协议对比、客户端配置、流媒体与 AI 解锁及故障排查等 100 个核心疑问，避坑不踩雷。</p>
+      </div>
+      <aside class="ai-update-card">
+        <span>收录规模</span>
+        <strong>100 问</strong>
+        <p>支持关键词搜索与分类快速定位，帮助你全面了解机场订阅与科学上网知识。</p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 搜索与分类导航 -->
+  <section class="section ai-tools-section">
+    <div class="section-head ai-section-head">
+      <div>
+        <h2>全量 FAQ 问题库</h2>
+        <p>搜索关键字或点击快捷标签导航。</p>
+      </div>
+      <div class="ai-search-wrap">
+        <input type="search" id="faq-search" class="ai-search" placeholder="输入关键词搜索 (如: IEPL, Clash, OpenAI)..." aria-label="搜索 FAQ 问题">
+      </div>
+    </div>
+
+    <div class="ai-filter-bar" id="faq-categories">
+      <button class="ai-filter active" data-cat="all">全部 (100)</button>
+      <button class="ai-filter" data-cat="cat1">1. 基础入门 (10)</button>
+      <button class="ai-filter" data-cat="cat2">2. 线路与节点 (10)</button>
+      <button class="ai-filter" data-cat="cat3">3. 协议技术 (10)</button>
+      <button class="ai-filter" data-cat="cat4">4. 客户端配置 (10)</button>
+      <button class="ai-filter" data-cat="cat5">5. 订阅链接 (10)</button>
+      <button class="ai-filter" data-cat="cat6">6. 速度与延迟 (10)</button>
+      <button class="ai-filter" data-cat="cat7">7. 解锁与 AI (10)</button>
+      <button class="ai-filter" data-cat="cat8">8. 套餐计费 (10)</button>
+      <button class="ai-filter" data-cat="cat9">9. 隐私安全 (10)</button>
+      <button class="ai-filter" data-cat="cat10">10. 故障排查 (10)</button>
+    </div>
+
+    <div class="faq-list" id="faq-container">
+
+      <!-- 分类一：基础概念与入门 (001 - 010) -->
+      <details class="faq-item" data-cat="cat1">
+        <summary><b>001</b><span>什么是机场？为什么叫“机场”？</span><i>+</i></summary>
+        <p>“机场”是网络翻墙/科学上网服务商的俗称。因为 early 阶段 Shadowsocks 客户端图标是一个纸飞机，提供这些节点接入服务的平台便被网友形象地称为“机场”，其节点订阅链接通常被称为“机票”。</p>
+      </details>
+      <details class="faq-item" data-cat="cat1">
+        <summary><b>002</b><span>机场和传统 VPN 有什么区别？</span><i>+</i></summary>
+        <p>VPN（如 ExpressVPN、NordVPN）最初设计用于企业加密传输，采用全局代理模式，易被防火墙特征识别；而机场基于 Shadowsocks、V2Ray、Trojan 等现代分流协议，只代理指定流量，支持国内流量直连、国外流量代理，速度更快且更节省流量。</p>
+      </details>
+      <details class="faq-item" data-cat="cat1">
+        <summary><b>003</b><span>什么是节点？代理节点是如何工作的？</span><i>+</i></summary>
+        <p>节点指的是机场部署在海外（如香港、东京、新加坡、美国）的服务器接入点。你的网络流量先加密发送到机场节点，再由节点向目标网站发起请求并将结果返回给你，从而绕过本地网络封锁。</p>
+      </details>
+      <details class="faq-item" data-cat="cat1">
+        <summary><b>004</b><span>新手第一次接触机场，应该如何选择？</span><i>+</i></summary>
+        <p>建议新手优先考虑：① 是否提供一键客户端或傻瓜式导入；② 是否支持三网优化线路；③ 优先选择支持月付的套餐先测试，满意后再考虑长期订阅，切忌一上来购买多年大额套餐。</p>
+      </details>
+      <details class="faq-item" data-cat="cat1">
+        <summary><b>005</b><span>机场适合用来做哪些事情？</span><i>+</i></summary>
+        <p>机场适用于访问 Google、YouTube、Wikipedia、GitHub、ChatGPT、Claude、Netflix 等国外学习、工作、娱乐和科研资源，以及国际服游戏加速与跨境电商运营。</p>
+      </details>
+      <details class="faq-item" data-cat="cat1">
+        <summary><b>006</b><span>为什么打不开国外网站，必须使用机场？</span><i>+</i></summary>
+        <p>国内网络存在防火长城（GFW），通过 DNS 污染、IP 封锁和关键词阻断等技术屏蔽了境外部分网站与 API。机场通过加密代理隧道绕过了这些拦截机制。</p>
+      </details>
+      <details class="faq-item" data-cat="cat1">
+        <summary><b>007</b><span>什么是代理客户端？为什么买了机场还需要软件？</span><i>+</i></summary>
+        <p>机场只提供“网络节点与账号凭证”（即订阅链接），而客户端软件（如 Clash、Shadowrocket、Sing-box）负责在本地接管网络流量、解密配置并根据路由规则将数据分发给不同的节点。</p>
+      </details>
+      <details class="faq-item" data-cat="cat1">
+        <summary><b>008</b><span>机场支持哪些平台和设备？</span><i>+</i></summary>
+        <p>主流机场支持几乎所有设备，包括 Windows、macOS、Linux、Android 安卓手机、iOS (iPhone/iPad)、Apple TV 甚至路由器。</p>
+      </details>
+      <details class="faq-item" data-cat="cat1">
+        <summary><b>009</b><span>使用机场上网会被运营商或第三方监控吗？</span><i>+</i></summary>
+        <p>机场传输的数据通过 TLS/AES 强加密，本地运营商只能看到你连接到了机场的入口 IP，无法查看你具体访问的网址、网页内容或传输数据。</p>
+      </details>
+      <details class="faq-item" data-cat="cat1">
+        <summary><b>010</b><span>一家机场可以多台设备同时使用吗？</span><i>+</i></summary>
+        <p>绝大多数机场支持个人多设备同时在线（如手机+电脑+平板）。但需要注意查看套餐的“并发设备限制”（如限制 3 台或 5 台设备），严禁超出额度或共享给其他人使用。</p>
+      </details>
+
+      <!-- 分类二：线路与节点知识 (011 - 020) -->
+      <details class="faq-item" data-cat="cat2">
+        <summary><b>011</b><span>什么是直连线路（BGP 直连）？</span><i>+</i></summary>
+        <p>直连线路是指你的数据直接从国内运营商出口连接到海外节点服务器。成本较低，但在晚高峰期容易受到国际出口拥堵和防火墙干扰，出现高延迟和掉包。</p>
+      </details>
+      <details class="faq-item" data-cat="cat2">
+        <summary><b>012</b><span>什么是中转线路？中转有什么优势？</span><i>+</i></summary>
+        <p>中转线路在境内部署了中转服务器（如广东、上海、浙江中转机房）。你的流量先发给境内中转机房，再由中转机房发往海外落地节点。比直连更稳定、延迟更低，能显著改善跨网体验。</p>
+      </details>
+      <details class="faq-item" data-cat="cat2">
+        <summary><b>013</b><span>什么是 IEPL 专线？IEPL 和 IPLC 有何区别？</span><i>+</i></summary>
+        <p>IEPL（国际以太网专线）和 IPLC（国际私有租用线路）都是企业级内网专线，数据直接在企业私有光缆中传输，完全不经过公网防火墙审查。IEPL 为二层链路，IPLC 为一层物理链路，两者体验极其接近，特点是高稳定、低延迟、晚高峰不掉速。</p>
+      </details>
+      <details class="faq-item" data-cat="cat2">
+        <summary><b>014</b><span>什么是 BGP 跨境专线？</span><i>+</i></summary>
+        <p>BGP 专线是指入口采用 BGP 多线接入（电信、联通、移动自动选路），后端连接企业内网专线到海外。无论使用哪个运营商的网络，都能获得极低延迟和一致的稳定体验。</p>
+      </details>
+      <details class="faq-item" data-cat="cat2">
+        <summary><b>015</b><span>为什么专线晚高峰几乎不卡顿？</span><i>+</i></summary>
+        <p>公网直连在晚高峰（20点-23点）会遭遇海缆拥堵和 GFW 深度包检测；而专线使用的是独享企业带宽与专有内网隧道，绕过了公网拥堵和审查，因此晚高峰依然能保持满速跑满。</p>
+      </details>
+      <details class="faq-item" data-cat="cat2">
+        <summary><b>016</b><span>什么是节点倍率？1x、2x、0.5x 是什么意思？</span><i>+</i></summary>
+        <p>倍率指的是消耗套餐流量的扣费比例。如果连接 1x 节点使用 1GB 流量扣 1GB；连接 2x 节点使用 1GB 扣 2GB 额度；连接 0.5x 低倍率节点使用 1GB 则仅扣除 0.5GB 额度。</p>
+      </details>
+      <details class="faq-item" data-cat="cat2">
+        <summary><b>017</b><span>为什么有些节点标记为“高倍率”或“原生 IP”？</span><i>+</i></summary>
+        <p>部分节点成本较高（如精品原生机房 IP、特殊打游戏专线、大带宽高防护节点），机场会通过设置高倍率（如 3x 或 5x）来平衡成本与使用负荷。</p>
+      </details>
+      <details class="faq-item" data-cat="cat2">
+        <summary><b>018</b><span>落地 IP 与入口 IP 分别指什么？</span><i>+</i></summary>
+        <p>入口 IP 是你本地设备建立代理连接的第一站（通常在境内）；落地 IP 是最终向目标网站（如 Google/Netflix）发起请求的海外服务器 IP，决定了网站识别你所在的位置。</p>
+      </details>
+      <details class="faq-item" data-cat="cat2">
+        <summary><b>019</b><span>什么是“三网优化”？对移动/联通/电信用户有何影响？</span><i>+</i></summary>
+        <p>中国三大运营商（电信、联通、移动）的出海线路差异巨大。三网优化代表机场针对电信 CN2/GIA、联通 9929/4837 和移动 CMI 均做了专属适配，避免移动用户或电信用户单向卡顿。</p>
+      </details>
+      <details class="faq-item" data-cat="cat2">
+        <summary><b>020</b><span>节点列表里的 HK、SG、JP、US、TW 分别代表什么？</span><i>+</i></summary>
+        <p>这些是节点物理位置或落地出口的国家/地区简称：HK（香港）、SG（新加坡）、JP（日本）、US（美国）、TW（台湾）、KR（韩国）、UK（英国）。</p>
+      </details>
+
+      <!-- 分类三：协议与技术细节 (021 - 030) -->
+      <details class="faq-item" data-cat="cat3">
+        <summary><b>021</b><span>什么是 Shadowsocks (SS) 协议？</span><i>+</i></summary>
+        <p>Shadowsocks 是最经典的轻量级安全代理协议，速度快、资源占用低。目前许多专线机场依然广泛采用 SS 协议搭配内网专线使用。</p>
+      </details>
+      <details class="faq-item" data-cat="cat3">
+        <summary><b>022</b><span>什么是 ShadowsocksR (SSR) 协议？</span><i>+</i></summary>
+        <p>SSR 是基于 SS 开发的早期分支，引入了混淆和协议特性。现已被性能更强、安全性更高的 VMess、VLESS 和 Trojan 等现代协议所取代。</p>
+      </details>
+      <details class="faq-item" data-cat="cat3">
+        <summary><b>023</b><span>什么是 V2Ray / VMess 协议？</span><i>+</i></summary>
+        <p>VMess 是 V2Ray 项目的核心加密传输协议，支持丰富的伪装方式（如 WebSocket+TLS），能将代理流量伪装成正常的 HTTPS 网站浏览。</p>
+      </details>
+      <details class="faq-item" data-cat="cat3">
+        <summary><b>024</b><span>什么是 VLESS 协议？它比 VMess 好在哪里？</span><i>+</i></summary>
+        <p>VLESS 是 VMess 的升级版轻量无状态协议，去掉了繁重的双重加密解密步骤，延迟更低、性能消耗更小，在大带宽场景下跑速度更轻松。</p>
+      </details>
+      <details class="faq-item" data-cat="cat3">
+        <summary><b>025</b><span>什么是 Trojan 协议？</span><i>+</i></summary>
+        <p>Trojan 模仿了标准的 HTTPS 域名证书加密流程，直接模仿最常见的网页访问流量，抗封锁能力强且在公网直连线路上表现良好。</p>
+      </details>
+      <details class="faq-item" data-cat="cat3">
+        <summary><b>026</b><span>什么是 Hysteria / Hysteria 2 (HY2) 协议？</span><i>+</i></summary>
+        <p>Hysteria 基于 UDP / QUIC 协议打造，具备极其强悍的抗掉包和拥堵控制能力。在恶劣网络或高掉包环境下，HY2 能大幅提升单线程下载速度。</p>
+      </details>
+      <details class="faq-item" data-cat="cat3">
+        <summary><b>027</b><span>什么是 TUIC 协议？</span><i>+</i></summary>
+        <p>TUIC 也是基于 QUIC 协议设计的现代代理协议，旨在降低连接建立的开销并优化低质量网络条件下的握手速度与延迟表现。</p>
+      </details>
+      <details class="faq-item" data-cat="cat3">
+        <summary><b>028</b><span>什么是 Reality 传输协议/防封机制？</span><i>+</i></summary>
+        <p>VLESS-Reality 是一种借用真实大厂网站（如 Apple/Microsoft）TLS 证书与握手特性的协议，去除了中间人特征，安全性高且无需自己购买域名。</p>
+      </details>
+      <details class="faq-item" data-cat="cat3">
+        <summary><b>029</b><span>什么是 gRPC / WebSocket 传输层协议？</span><i>+</i></summary>
+        <p>WebSocket 和 gRPC 是代理协议底层的传输介质。通过将代理流量封装进 WebSocket 或 gRPC 管道，可以配合 CDN 节点进行复用和高隐蔽传输。</p>
+      </details>
+      <details class="faq-item" data-cat="cat3">
+        <summary><b>030</b><span>UDP 转发是什么？为什么玩游戏需要 UDP 支持？</span><i>+</i></summary>
+        <p>UDP 是无连接的高效传输协议，多用于外服联机游戏语音、P2P 组网和实时音视频通话。如果机场节点不支持 UDP 转发，游戏可能无法建立联机。</p>
+      </details>
+
+      <!-- 分类四：客户端配置与使用 (031 - 040) -->
+      <details class="faq-item" data-cat="cat4">
+        <summary><b>031</b><span>Windows 电脑推荐用什么客户端？</span><i>+</i></summary>
+        <p>推荐使用 <b>Clash Verge Rev</b>、<b>Sing-box GUI</b>、<b>NekoBox for Windows</b> 或 <b>v2rayN</b>，界面友好且支持现代内核和 TUN 模式。</p>
+      </details>
+      <details class="faq-item" data-cat="cat4">
+        <summary><b>032</b><span>macOS 苹果电脑推荐用什么客户端？</span><i>+</i></summary>
+        <p>推荐使用 <b>Clash Verge Rev (macOS)</b>、<b>Surge for Mac</b>、<b>Stash for Mac</b> 或 <b>Sing-box</b>，原生支持 Apple Silicon 芯片且性能优秀。</p>
+      </details>
+      <details class="faq-item" data-cat="cat4">
+        <summary><b>033</b><span>Android 安卓手机推荐用什么客户端？</span><i>+</i></summary>
+        <p>推荐使用 <b>Clash Meta for Android</b>、<b>Sing-box</b>、<b>Surfboard (冲浪板)</b> 或 <b>NekoBox for Android</b>。</p>
+      </details>
+      <details class="faq-item" data-cat="cat4">
+        <summary><b>034</b><span>iOS (iPhone/iPad) 推荐用什么客户端？</span><i>+</i></summary>
+        <p>推荐使用 <b>Shadowrocket (小火箭)</b>、<b>Stash</b>、<b>Quantumult X (圈x)</b>、<b>Loon</b> 或 <b>Surge iOS</b>（需使用非中国大陆 Apple ID 购买）。</p>
+      </details>
+      <details class="faq-item" data-cat="cat4">
+        <summary><b>035</b><span>什么是 Clash / Clash Verge / Clash Meta？</span><i>+</i></summary>
+        <p>Clash 是基于规则的通用代理内核。原作者停更后，社区推出了开源分支 <b>Mihomo (Clash Meta)</b> 和图形客户端 <b>Clash Verge Rev</b>，支持最新的协议和脚本规则。</p>
+      </details>
+      <details class="faq-item" data-cat="cat4">
+        <summary><b>036</b><span>什么是 Shadowrocket (小火箭)？如何购买？</span><i>+</i></summary>
+        <p>Shadowrocket 是 iOS 平台上最流行、功能全面的网络代理软件（售价 $2.99）。需登录美区/港区等外区 Apple ID 后在 App Store 购买下载。</p>
+      </details>
+      <details class="faq-item" data-cat="cat4">
+        <summary><b>037</b><span>什么是 Surge / Quantumult X (圈x)？</span><i>+</i></summary>
+        <p>两者均为 iOS/macOS 平台上的顶级高级代理与网络调试工具。功能极强，支持复杂脚本、重写、流量分析和分流路由设定。</p>
+      </details>
+      <details class="faq-item" data-cat="cat4">
+        <summary><b>038</b><span>什么是 Sing-box？它为什么越来越流行？</span><i>+</i></summary>
+        <p>Sing-box 是下一代通用代理平台内核，资源占用极小、运行效率极高，且原生支持 Hysteria 2、TUIC v5、VLESS Reality 等最新协议。</p>
+      </details>
+      <details class="faq-item" data-cat="cat4">
+        <summary><b>039</b><span>为什么客户端提示“核心崩溃”或“节点全红”？</span><i>+</i></summary>
+        <p>通常是因为：① 配置文件语法错误；② 端口被其他软件占用；③ 节点协议内核版本太旧；④ 系统时间未同步导致的 SSL 握手失败。</p>
+      </details>
+      <details class="faq-item" data-cat="cat4">
+        <summary><b>040</b><span>如何配置路由规则（全局 / 规则 / 匹配）？</span><i>+</i></summary>
+        <p><b>Rule (规则模式)</b>：推荐使用，国内直接连，国外走代理；<b>Global (全局模式)</b>：所有流量均走代理节点；<b>Direct (直连模式)</b>：所有流量绕过代理。</p>
+      </details>
+
+      <!-- 分类五：订阅链接与管理 (041 - 050) -->
+      <details class="faq-item" data-cat="cat5">
+        <summary><b>041</b><span>什么是订阅链接（Subscription Link）？</span><i>+</i></summary>
+        <p>订阅链接是机场为你生成的唯一网址（URL）。客户端通过请求该链接，能自动拉取最新的节点地址、加密端口、密钥和协议配置信息。</p>
+      </details>
+      <details class="faq-item" data-cat="cat5">
+        <summary><b>042</b><span>为什么不能把订阅链接公开发布或分享给他人？</span><i>+</i></summary>
+        <p>订阅链接包含你的私人账号 token。他人获取后可以随意使用你的套餐流量，甚至可能导致你的账号因“多地区异常并发”被机场系统封禁。</p>
+      </details>
+      <details class="faq-item" data-cat="cat5">
+        <summary><b>043</b><span>什么是订阅转换？订阅转换有安全风险吗？</span><i>+</i></summary>
+        <p>订阅转换将机场原生的配置格式转换为 Clash、Quantumult X 等特定客户端格式。使用第三方公共转换平台存在订阅 URL 泄露风险，建议优先使用机场自建转换或客户端自带转换。</p>
+      </details>
+      <details class="faq-item" data-cat="cat5">
+        <summary><b>044</b><span>如何在客户端中更新订阅？</span><i>+</i></summary>
+        <p>在客户端的“配置文件/配置管理”页面中，找到对应的机场配置，点击“更新 / Update / Refresh”按钮即可拉取最新的节点列表。</p>
+      </details>
+      <details class="faq-item" data-cat="cat5">
+        <summary><b>045</b><span>为什么更新订阅时提示“连接超时”或“解析失败”？</span><i>+</i></summary>
+        <p>可能原因：① 机场官网域名被污染或维护；② 开启了旧的系统代理影响了请求；③ 套餐已过期或已被系统禁用。可先开启允许直连或使用备用域名。</p>
+      </details>
+      <details class="faq-item" data-cat="cat5">
+        <summary><b>046</b><span>订阅链接过期了怎么办？</span><i>+</i></summary>
+        <p>如果套餐已到期，只需登录机场后台重新续费或购买新套餐；续费后在客户端重新拉取/刷新一次订阅即可恢复节点更新。</p>
+      </details>
+      <details class="faq-item" data-cat="cat5">
+        <summary><b>047</b><span>什么是 OneClick / 一键导入功能？</span><i>+</i></summary>
+        <p>机场仪表盘提供的便利按键，点击后会自动调用深层协议调起本地已安装的 Clash 或 Shadowrocket 软件，省去手动复制粘贴 URL 的繁琐过程。</p>
+      </details>
+      <details class="faq-item" data-cat="cat5">
+        <summary><b>048</b><span>如何重置我的订阅链接？</span><i>+</i></summary>
+        <p>若不小心泄露了订阅链接，登录机场官网控制台，在“订阅管理/个人设置”中点击“重置订阅/Reset Token”，原链接将失效并生成全新 URL。</p>
+      </details>
+      <details class="faq-item" data-cat="cat5">
+        <summary><b>049</b><span>订阅节点数量太多导致客户端卡顿怎么处理？</span><i>+</i></summary>
+        <p>可以在订阅转换或客户端规则设置中剔除不需要的地区节点（如过滤不常用的南美或欧洲高延迟节点），减少客户端内存开销。</p>
+      </details>
+      <details class="faq-item" data-cat="cat5">
+        <summary><b>050</b><span>订阅链接泄露了会被扣光流量吗？</span><i>+</i></summary>
+        <p>是的。只要拿到你的订阅 URL，任何人都可以下载节点并在自己设备上无限消耗你的配额，因此请妥善保管。</p>
+      </details>
+
+      <!-- 分类六：速度、延迟与稳定性 (051 - 060) -->
+      <details class="faq-item" data-cat="cat6">
+        <summary><b>051</b><span>节点延迟（Ping）越低就代表速度越快吗？</span><i>+</i></summary>
+        <p>不一定。Ping/延迟测试反映的是数据包往返时间（如香港 30ms，美国 180ms），而速度（带宽下载能力）取决于节点服务器的出口带宽与负载。低延迟适合游戏，高带宽适合 4K 视频。</p>
+      </details>
+      <details class="faq-item" data-cat="cat6">
+        <summary><b>052</b><span>为什么同一节点测速很棒，但打开网页却很慢？</span><i>+</i></summary>
+        <p>可能是 DNS 解析缓慢、本地浏览器缓存干扰、目标网站本身防护风控，或者是客户端规则配置不合理导致的 DNS 污染。</p>
+      </details>
+      <details class="faq-item" data-cat="cat6">
+        <summary><b>053</b><span>晚高峰（20:00 - 23:00）速度变慢、掉包严重的原因？</span><i>+</i></summary>
+        <p>晚高峰是国际出口公网流量峰值期。普通直连线路受公网拥堵影响巨大，唯有采用专线（IEPL/IPLC）或高防护中转的机场才能保持平稳。</p>
+      </details>
+      <details class="faq-item" data-cat="cat6">
+        <summary><b>054</b><span>什么是“掉包率（Packet Loss）”？对使用体验有什么影响？</span><i>+</i></summary>
+        <p>掉包率指数据传输过程中丢失数据包的比例。掉包率过高会导致网页加载断断续续、视频频繁缓冲以及在线语音/联机游戏严重卡顿。</p>
+      </details>
+      <details class="faq-item" data-cat="cat6">
+        <summary><b>055</b><span>什么是节点峰值带宽（如 1Gbps / 10Gbps）？</span><i>+</i></summary>
+        <p>指节点服务器网卡与接入骨干网的最大吞吐极限带宽。峰值带宽越高，多用户同时下载和播放 4K/8K 超高清视频时越不容易遭遇瓶颈。</p>
+      </details>
+      <details class="faq-item" data-cat="cat6">
+        <summary><b>056</b><span>为什么测速跑不满自己的百兆/千兆宽带？</span><i>+</i></summary>
+        <p>受到代理协议解密 CPU 瓶颈、机场单节点限速策略、路由器 Wi-Fi 信号以及国际链路单线程带宽限制等多重影响。</p>
+      </details>
+      <details class="faq-item" data-cat="cat6">
+        <summary><b>057</b><span>单线程测速与多线程测速有什么区别？</span><i>+</i></summary>
+        <p>单线程反映单路下载（如网页加载、文件单线程下载）能力，考验线路品质；多线程（如 Speedtest 默认）通过并行建立多条管道跑满带宽。</p>
+      </details>
+      <details class="faq-item" data-cat="cat6">
+        <summary><b>058</b><span>为什么连上机场后本地网络断网或打不开国内网站？</span><i>+</i></summary>
+        <p>通常是开启了“全局模式”将国内请求也发往海外节点导致，或是 Clash 系统代理在非正常关机后残留在 Windows 注册表中。切换为“规则模式”即可。</p>
+      </details>
+      <details class="faq-item" data-cat="cat6">
+        <summary><b>059</b><span>为什么节点总是频繁断连或自动切换？</span><i>+</i></summary>
+        <p>检查客户端是否开启了“自动选择/UrlTest”节点策略。如果测速健康检查间隔设置太短，容易在节点微小波动时频繁跳换节点。</p>
+      </details>
+      <details class="faq-item" data-cat="cat6">
+        <summary><b>060</b><span>如何测试节点的实际出海速度与真实 Bandwidth？</span><i>+</i></summary>
+        <p>可以通过 YouTube 播放 4K 视频查看“详细统计信息（Stats for nerds）”中的 Connection Speed，或使用 Speedtest / Fast.com 进行实测。</p>
+      </details>
+
+      <!-- 分类七：流媒体与 AI 服务解锁 (061 - 070) -->
+      <details class="faq-item" data-cat="cat7">
+        <summary><b>061</b><span>什么是流媒体解锁（Netflix / Disney+ / HBO）？</span><i>+</i></summary>
+        <p>流媒体平台会对机房广播 IP 进行封锁。机场通过部署原生住宅 IP 或 DNS 代理分流，使用户能够正常观看非自制剧集和特定地区限定内容。</p>
+      </details>
+      <details class="faq-item" data-cat="cat7">
+        <summary><b>062</b><span>为什么有些节点能看 YouTube 但看 Netflix 提示使用代理？</span><i>+</i></summary>
+        <p>YouTube 封锁宽松，只需普通机房 IP；而 Netflix 防火墙非常严苛，会识别并屏蔽大部分常用数据中心 IP 地址。</p>
+      </details>
+      <details class="faq-item" data-cat="cat7">
+        <summary><b>063</b><span>什么是“原生 IP”？流媒体解锁必须用原生 IP 吗？</span><i>+</i></summary>
+        <p>原生 IP 指 IP 注册地与服务器物理机房所在地一致的 IP。并非绝对必须，机场通过 DNS 轮询解锁或住宅代理也能实现完美的流媒体解锁。</p>
+      </details>
+      <details class="faq-item" data-cat="cat7">
+        <summary><b>064</b><span>什么是 DNS 解锁 / 流媒体分流解锁？</span><i>+</i></summary>
+        <p>机场将流媒体流量通过 DNS 劫持自动路由到特定的“解锁出口”，使主线节点的常规流量不影响流媒体解封，兼顾速度与成本。</p>
+      </details>
+      <details class="faq-item" data-cat="cat7">
+        <summary><b>065</b><span>ChatGPT 提示“Access Denied”或 1020 错误怎么办？</span><i>+</i></summary>
+        <p>说明当前节点 IP 触发了 Cloudflare 安全风控。请更换机场专门标记为“ChatGPT 解锁”或“AI 专用”的节点，并清理浏览器 Cookie。</p>
+      </details>
+      <details class="faq-item" data-cat="cat7">
+        <summary><b>066</b><span>Claude / Claude Code 账号容易被封是机场原因吗？</span><i>+</i></summary>
+        <p>Anthropic 对代理 IP 审查极严。大量用户共享同个节点出口极易引发风控连坐封号。建议选用专线固定 IP 或 AI 全解锁极佳的机场。</p>
+      </details>
+      <details class="faq-item" data-cat="cat7">
+        <summary><b>067</b><span>Gemini / OpenAI / Midjourney 对节点有哪些特殊要求？</span><i>+</i></summary>
+        <p>要求 IP 干净、未被大量轮换封禁、不是常见的数据中心机房段，且地区需在对应 AI 服务的支持国家区域内（如美区、日区、新加坡）。</p>
+      </details>
+      <details class="faq-item" data-cat="cat7">
+        <summary><b>068</b><span>如何配置客户端规则让 AI 请求走指定解锁节点？</span><i>+</i></summary>
+        <p>在 Clash 或 Stash 的规则匹配（Rule）中添加 DOMAIN-KEYWORD（如 openai, anthropic, bard），将其目标策略组指向固定的 AI 解锁节点。</p>
+      </details>
+      <details class="faq-item" data-cat="cat7">
+        <summary><b>069</b><span>为什么 TikTok 打开是黑屏无视频？</span><i>+</i></summary>
+        <p>TikTok 会检测 SIM 卡运营商和 IP 归属地。需拔出国内 SIM 卡或配合虚拟定位，同时使用机场专用的“TikTok 原生解锁节点”。</p>
+      </details>
+      <details class="faq-item" data-cat="cat7">
+        <summary><b>070</b><span>为什么 Google 搜索频繁弹出人机验证（reCAPTCHA）？</span><i>+</i></summary>
+        <p>表明该节点同一 IP 上有过多用户正在高频向 Google 发起搜索，触发了防刷机制。可尝试切换较冷门的节点接入。</p>
+      </details>
+
+      <!-- 分类八：套餐、流量与计费规则 (071 - 080) -->
+      <details class="faq-item" data-cat="cat8">
+        <summary><b>071</b><span>按月付费（月付）与按年付费（年付）哪个更合适？</span><i>+</i></summary>
+        <p>推荐优先<b>月付或季付</b>。虽然年付折算单月价格更低，但月付能有效规避机场服务质量下滑或跑路风险，资金灵活性更高。</p>
+      </details>
+      <details class="faq-item" data-cat="cat8">
+        <summary><b>072</b><span>什么是不限时套餐（一次性流量包 / 永久有效）？</span><i>+</i></summary>
+        <p>一次性购买固定流量（如 100GB 或 500GB），流量不过期、用完为止。非常适合轻度用户、备用网络或用量不规律的群体。</p>
+      </details>
+      <details class="faq-item" data-cat="cat8">
+        <summary><b>073</b><span>什么是流量重置？是在自然月第一天还是购买日重置？</span><i>+</i></summary>
+        <p>大部分机场采用“账单日重置”，即从你购买或续费的具体日期起算（如每月 15 号自动重置额度）；少数机场按每月 1 号统一重置。</p>
+      </details>
+      <details class="faq-item" data-cat="cat8">
+        <summary><b>074</b><span>流量用光了之后可以提前重置流量吗？</span><i>+</i></summary>
+        <p>大部分机场后台提供“提前重置流量/购买流量叠加包”功能，支付少量费用即可立即恢复当前周期满额流量。</p>
+      </details>
+      <details class="faq-item" data-cat="cat8">
+        <summary><b>075</b><span>什么是“并发设备限制”？</span><i>+</i></summary>
+        <p>指同一时刻使用该机场节点在线建立代理连接的客户端数量上限（如限 2台、5台设备）。超出后部分设备将被自动断开。</p>
+      </details>
+      <details class="faq-item" data-cat="cat8">
+        <summary><b>076</b><span>为什么有些机场禁止多人共享账号？</span><i>+</i></summary>
+        <p>多人跨异地 IP 共享同一个订阅容易导致节点连接数暴涨，引发系统安全策略拦截，同时也为了防止黑产倒卖流量。</p>
+      </details>
+      <details class="faq-item" data-cat="cat8">
+        <summary><b>077</b><span>机场支持哪些支付方式？（微信/支付宝/USDT/信用卡）</span><i>+</i></summary>
+        <p>绝大多数国内机场支持支付宝和微信扫码，部分中高端机场支持加密货币（USDT/BTC）及海外信用卡支付。</p>
+      </details>
+      <details class="faq-item" data-cat="cat8">
+        <summary><b>078</b><span>购买套餐后支持退款吗？退款政策通常是怎样的？</span><i>+</i></summary>
+        <p>机场属于虚拟数字服务，行业内绝大多数机场<b>不支持无理由退款</b>。因此购买前一定要先看清条款或先买小额月付测试。</p>
+      </details>
+      <details class="faq-item" data-cat="cat8">
+        <summary><b>079</b><span>什么是工单（Ticket）系统？发工单要注意什么？</span><i>+</i></summary>
+        <p>工单是联系机场售后客服官方途径。提交工单时应清晰说明你的运营商、客户端类型、具体节点及错误截图，切勿提交辱骂性文字。</p>
+      </details>
+      <details class="faq-item" data-cat="cat8">
+        <summary><b>080</b><span>为什么有些机场有优惠码？优惠码怎么使用？</span><i>+</i></summary>
+        <p>优惠码是机场做活动放出的折扣凭证。在结算页面“折扣码/Coupon”输入框粘贴并应用，即可享受打折优惠。</p>
+      </details>
+
+      <!-- 分类九：隐私、安全与风险提示 (081 - 090) -->
+      <details class="faq-item" data-cat="cat9">
+        <summary><b>081</b><span>机场主能看到我的上网浏览记录或明文密码吗？</span><i>+</i></summary>
+        <p>不能。现代网站几乎全站普及 HTTPS 传输加密，机场节点仅能看到你连接的目标域名/IP 地址，无法解密查看你的具体网页内容和密码。</p>
+      </details>
+      <details class="faq-item" data-cat="cat9">
+        <summary><b>082</b><span>为什么访问银行、支付类网站时建议关闭代理或走直连？</span><i>+</i></summary>
+        <p>国内银行、网银和支付平台风控极严。如果系统检测到登录 IP 突变为境外机房地址，可能会触发安全保护性冻结账户。</p>
+      </details>
+      <details class="faq-item" data-cat="cat9">
+        <summary><b>083</b><span>什么是跑路风险？如何判断一家机场的跑路概率？</span><i>+</i></summary>
+        <p>跑路指机场站长关站失联。低价促销多年包、开业不到两周、没有客服工单响应以及社群全员禁言的机场跑路概率极高。</p>
+      </details>
+      <details class="faq-item" data-cat="cat9">
+        <summary><b>084</b><span>为什么不建议一次性买断多年的“永久套餐”？</span><i>+</i></summary>
+        <p>网络环境与线路成本动态变化，几乎没有机场能维持真正的“永久”。打着永久旗号的往往是资金链断裂前最后的吸金圈套。</p>
+      </details>
+      <details class="faq-item" data-cat="cat9">
+        <summary><b>085</b><span>免费机场/免费节点能用吗？有什么安全隐患？</span><i>+</i></summary>
+        <p>免费节点往往极不稳定，且极易混入恶意钓鱼服务器或注入广告，缺乏隐私保障，仅适合紧急备用，不建议日常主用。</p>
+      </details>
+      <details class="faq-item" data-cat="cat9">
+        <summary><b>086</b><span>使用机场下载 BT / P2P 种子文件会被封禁吗？</span><i>+</i></summary>
+        <p>大部分机场严格禁止利用节点进行 BT/迅雷/P2P 下载。因为 P2P 会瞬间跑满公网带宽，且可能收到海外版权机构（DMCA）的严重投诉。</p>
+      </details>
+      <details class="faq-item" data-cat="cat9">
+        <summary><b>087</b><span>什么是审计规则（屏蔽政治敏感、垃圾邮件、BT 下载）？</span><i>+</i></summary>
+        <p>机场在节点服务端设置的安全过滤策略，用以自动屏蔽非法攻击、垃圾邮件发送（25端口）和版权违规，维护服务器网络合规。</p>
+      </details>
+      <details class="faq-item" data-cat="cat9">
+        <summary><b>088</b><span>机场账号如果被借给他人使用会带来什么风险？</span><i>+</i></summary>
+        <p>如果借用者使用你的节点从事违法越界行为或触发防滥用审计，你的机场账号与订阅令牌将被永久封杀且无法退款。</p>
+      </details>
+      <details class="faq-item" data-cat="cat9">
+        <summary><b>089</b><span>什么是前置代理 / 链式代理（Chaining）？</span><i>+</i></summary>
+        <p>指将一个代理节点的输出作为下一个代理节点的输入（如 A节点 -> B节点），用于双重隐藏真实 IP 或提升特定环境的安全防护。</p>
+      </details>
+      <details class="faq-item" data-cat="cat9">
+        <summary><b>090</b><span>如何在公共 Wi-Fi 环境下保护个人数据安全？</span><i>+</i></summary>
+        <p>在机场、咖啡厅连公开 Wi-Fi 时，保持代理开启或连接加密隧道，能有效防范中间人攻击（MITM）和 Wi-Fi 流量监听。</p>
+      </details>
+
+      <!-- 分类十：故障排查与售后支持 (091 - 100) -->
+      <details class="faq-item" data-cat="cat10">
+        <summary><b>091</b><span>刚买的机场节点全红无法连接，排查步骤是什么？</span><i>+</i></summary>
+        <p>步骤：① 检查套餐是否支付成功且状态为“激活”；② 确认客户端时间是否与标准北京时间完全精准一致；③ 重新刷新一次订阅；④ 尝试关闭电脑防火墙或安全卫士。</p>
+      </details>
+      <details class="faq-item" data-cat="cat10">
+        <summary><b>092</b><span>为什么只有部分节点可用，其他节点全部超时？</span><i>+</i></summary>
+        <p>通常是因为部分节点线路临时维护、入口机房受损，或者是你本地网络运营商与该特定节点机房之间路由突发异常。</p>
+      </details>
+      <details class="faq-item" data-cat="cat10">
+        <summary><b>093</b><span>系统时间不准确会导致代理连接失败吗？</span><i>+</i></summary>
+        <p><b>是的！</b>代理加密（如 VMess/Trojan/TLS）高度依赖精确的时间戳校验。如果设备时间偏差超过 90 秒，会导致加密握手直接被拒。</p>
+      </details>
+      <details class="faq-item" data-cat="cat10">
+        <summary><b>094</b><span>为什么 Clash 开启后系统无法上网，关闭后也无法上网？</span><i>+</i></summary>
+        <p>Clash 异常关闭时未自动清理 Windows 系统代理设置。解决办法：进入电脑“设置 -> 网络和 Internet -> 代理”，手动关闭“使用代理服务器”。</p>
+      </details>
+      <details class="faq-item" data-cat="cat10">
+        <summary><b>095</b><span>手机开热点给电脑用，代理节点无法连通怎么解决？</span><i>+</i></summary>
+        <p>开启热点共享时，部分安卓或 iOS 系统会隔离局域网代理流量。需在客户端设置中允许“局域网连接（Allow LAN）”或开启 TUN 模式。</p>
+      </details>
+      <details class="faq-item" data-cat="cat10">
+        <summary><b>096</b><span>开启代理后无法连接公司 VPN 或内部局域网怎么办？</span><i>+</i></summary>
+        <p>因为路由冲突。可在客户端规则配置中将公司 IP 段或内网域名设定为 Direct (直连)，避免局域网数据误走代理。</p>
+      </details>
+      <details class="faq-item" data-cat="cat10">
+        <summary><b>097</b><span>什么是 TUN 模式？什么时候需要开启 TUN 模式？</span><i>+</i></summary>
+        <p>TUN 模式建立了一个虚拟网卡，接管设备底层所有软件的全部流量。用于加速原生不支持代理设置的系统软件、命令行或游戏。</p>
+      </details>
+      <details class="faq-item" data-cat="cat10">
+        <summary><b>098</b><span>节点名字带有“维护中”或“负载高”是什么意思？</span><i>+</i></summary>
+        <p>代表运维人员正在对该节点服务器升级带宽或迁移机房。此时建议手动切换到其他正常可用的节点。</p>
+      </details>
+      <details class="faq-item" data-cat="cat10">
+        <summary><b>099</b><span>遇到机场官网打不开、域名失效怎么办？</span><i>+</i></summary>
+        <p>机场官方通常会在 Telegram 公告群公布最新的防封备用发布页。也可以尝试开启代理后再尝试登录旧官网后台。</p>
+      </details>
+      <details class="faq-item" data-cat="cat10">
+        <summary><b>100</b><span>机场 Telegram 交流群或公告频道有什么作用？</span><i>+</i></summary>
+        <p>Telegram 群和频道是机场发布节点维护通知、紧急备用域名、优惠码以及解答用户疑问的最核心信息发布阵地。</p>
+      </details>
+
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="shell footer-line">
+    <span>© <span data-year></span> 梯子查</span>
+    <span>先读懂规则，再做决定</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+  // 简单交互脚本：分类筛选与实时搜索
+  document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('faq-search');
+    const categoryBtns = document.querySelectorAll('#faq-categories .ai-filter');
+    const faqItems = document.querySelectorAll('#faq-container .faq-item');
+
+    let currentCat = 'all';
+
+    function filterFAQ() {
+      const query = searchInput.value.trim().toLowerCase();
+
+      faqItems.forEach(item => {
+        const matchesCat = (currentCat === 'all' || item.dataset.cat === currentCat);
+        const text = item.textContent.toLowerCase();
+        const matchesQuery = !query || text.includes(query);
+
+        if (matchesCat && matchesQuery) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+
+    categoryBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+        categoryBtns.forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        currentCat = this.dataset.cat;
+        filterFAQ();
+      });
+    });
+
+    searchInput.addEventListener('input', filterFAQ);
+  });
+</script>
+</body>
+</html>
