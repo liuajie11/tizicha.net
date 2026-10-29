@@ -24,12 +24,12 @@ const REVIEW_LINKS = Object.freeze({
   yuntu: 'https://super.ytjcok.org/#/register?code=iKpNlXer',
   guannt: 'http://liujie2002.gntaff.com/#/?code=NoPkovej',
   kunpjs: 'https://kunpengjiasu.com/#/register?code=99UgsawR',
-  yunjiexian: 'https://youxia01.yunjiexianaff.com/#/?code=8ImGvubv',
-  dalaoyun: 'https://liu01.dalaoyunaff.com/#/?code=9A9fbKzz',
-  hqyun: 'https://123pps01.huanqiutiaff.com/#/?code=iJzShI5m',
-  shandians: 'https://eothvip01.shandianshuaff.com/#/?code=qNodU3f6',
-  liulianyun: 'http://853vip01.liulianyunaff.com/#/?code=O6mS8K5N',
-  sxjiasu: 'https://fugui0077.shenxingaff.com/#/?code=z3ybkLVj'
+  yunjiexian: 'https://liuajie7.yunjiexianaff.com/#/?code=AMWirEkQ',
+  dalaoyun: 'https://liujie2.dalaoyunaff.com/#/?code=mmPDuc6r',
+  hqyun: 'https://liuajie740.huanqiutiaff.com/#/?code=1PrqjboO',
+  shandians: 'https://liujie2.shandianshuaff.com/#/?code=vwBNE30O',
+  liulianyun: 'https://liuajie74.liulianyunaff.com/#/?code=rp2bbeus',
+  sxjiasu: 'https://wuhan01.shenxingaff.com/#/?code=z3ybkLVj'
 });
 
 Object.keys(REVIEW_LINKS).forEach(key => {

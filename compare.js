@@ -178,7 +178,7 @@
       estDate: '2024 年',
       suitable: '轻量浏览、临时备用',
       score: '8.9',
-      official: 'https://youxia01.yunjiexianaff.com/#/?code=8ImGvubv'
+      official: 'https://liuajie7.yunjiexianaff.com/#/?code=AMWirEkQ'
     },
     {
       id: 'dalaoyun',
@@ -198,7 +198,7 @@
       estDate: '2023 年',
       suitable: '家庭共享、高频下载、AI 办公',
       score: '9.1',
-      official: 'https://liu01.dalaoyunaff.com/#/?code=9A9fbKzz'
+      official: 'https://liujie2.dalaoyunaff.com/#/?code=mmPDuc6r'
     },
     {
       id: 'hqyun',
@@ -218,7 +218,7 @@
       estDate: '2023 年',
       suitable: '网页浏览、轻办公、入门月付',
       score: '8.9',
-      official: 'https://123pps01.huanqiutiaff.com/#/?code=iJzShI5m'
+      official: 'https://liuajie740.huanqiutiaff.com/#/?code=1PrqjboO'
     },
     {
       id: 'shandians',
@@ -238,7 +238,7 @@
       estDate: '2023 年',
       suitable: '4K/8K 视频、跨境办公',
       score: '9.3',
-      official: 'https://eothvip01.shandianshuaff.com/#/?code=qNodU3f6'
+      official: 'https://liujie2.shandianshuaff.com/#/?code=vwBNE30O'
     },
     {
       id: 'liulianyun',
@@ -258,7 +258,7 @@
       estDate: '2023 年',
       suitable: '追剧、流媒体均衡使用',
       score: '9.0',
-      official: 'http://853vip01.liulianyunaff.com/#/?code=O6mS8K5N'
+      official: 'https://liuajie74.liulianyunaff.com/#/?code=rp2bbeus'
     },
     {
       id: 'sxjiasu',
@@ -278,7 +278,7 @@
       estDate: '2024 年',
       suitable: '移动端、Wi-Fi切换、视频会议',
       score: '9.0',
-      official: 'https://fugui0077.shenxingaff.com/#/?code=z3ybkLVj'
+      official: 'https://wuhan01.shenxingaff.com/#/?code=z3ybkLVj'
     }
   ];
 
