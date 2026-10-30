@@ -13,7 +13,8 @@
     {name:'环球梯机场',slug:'hqyun',plan:'约 ¥22/月',code:'HQ66',line:'BGP + IEPL',ai:'ChatGPT / Gemini',devices:'未公开',score:'8.9',official:'https://liuajie740.huanqiutiaff.com/#/?code=1PrqjboO'},
     {name:'闪电鼠机场',slug:'shandians',plan:'¥22/月',code:'sd88',line:'双入口 IEPL',ai:'ChatGPT / Gemini',devices:'未公开',score:'9.3',official:'https://liujie2.shandianshuaff.com/#/?code=vwBNE30O'},
     {name:'榴莲云机场',slug:'liulianyun',plan:'约 ¥24/月',code:'ll88',line:'IPLC / IEPL',ai:'ChatGPT / Gemini',devices:'未公开',score:'9.0',official:'https://liuajie74.liulianyunaff.com/#/?code=rp2bbeus'},
-    {name:'神行加速机场',slug:'sxjiasu',plan:'约 ¥23/月',code:'sx0077',line:'IEPL 智能路由',ai:'ChatGPT / Gemini',devices:'未公开',score:'9.0',official:'https://wuhan01.shenxingaff.com/#/?code=z3ybkLVj'}
+    {name:'神行加速机场',slug:'sxjiasu',plan:'约 ¥23/月',code:'sx0077',line:'IEPL 智能路由',ai:'ChatGPT / Gemini',devices:'未公开',score:'9.0',official:'https://wuhan01.shenxingaff.com/#/?code=z3ybkLVj'},
+    {name:'二猫云机场',slug:'ermaoyun',plan:'¥20/月 · 100GB',code:'官方活动为准',line:'企业级 IEPL 专线',ai:'ChatGPT / Claude / Gemini',devices:'多设备',score:'9.2',official:'https://guangs.2maoyunaff.cc/#/?code=wMKtwSYr'}
   ];
 
   const rows = document.getElementById('ladder-rows');

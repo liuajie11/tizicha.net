@@ -279,6 +279,26 @@
       suitable: '移动端、Wi-Fi切换、视频会议',
       score: '9.0',
       official: 'https://wuhan01.shenxingaff.com/#/?code=z3ybkLVj'
+    },
+    {
+      id: 'ermaoyun',
+      name: '二猫云机场',
+      slug: 'ermaoyun',
+      minPrice: '¥7.40 / 月 (年付折算)',
+      plan: '¥20/月 · 100GB',
+      unitPriceNum: 0.200,
+      unitPriceStr: '¥0.200 / GB',
+      lineType: '企业级 IEPL 专线',
+      protocol: 'Shadowsocks, Trojan',
+      nodes: '港台日新美原生 IP 节点',
+      ai: 'ChatGPT, Claude, Gemini',
+      streaming: 'Netflix, Disney+, YouTube 4K, TikTok',
+      client: '通用客户端 (Clash/小火箭)',
+      devices: '多设备宽松',
+      estDate: '2024 年',
+      suitable: '晚高峰稳定、4K 视频、AI 办公',
+      score: '9.2',
+      official: 'https://guangs.2maoyunaff.cc/#/?code=wMKtwSYr'
     }
   ];
 

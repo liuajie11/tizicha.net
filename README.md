@@ -5,7 +5,7 @@
 
 ## 页面结构
 - `index.html`：首页，品牌定位、入口卡片、数据底气。
-- `ladder.html`：14 家梯子横向对比表，展示套餐、优惠码、线路、AI 解锁、设备数、评分与官网入口。
+- `ladder.html`：15 家梯子横向对比表，展示套餐、优惠码、线路、AI 解锁、设备数、评分与官网入口。
 - `ladder.js`：梯子对比表的数据与自动渲染逻辑。
 - `airport.html`：机场推荐，按轻量、均衡、性能型分层。
 - `reviews.html`：机场评测，承载测速、晚高峰、流媒体和售后文章。
@@ -36,6 +36,7 @@
 - `review-shandians.html`：闪电鼠机场
 - `review-liulianyun.html`：榴莲云机场
 - `review-sxjiasu.html`：神行加速机场
+- `review-ermaoyun.html`：二猫云机场
 
 评测页由 `review.js` 按品牌数据渲染，`assets/review-cover.svg` 为统一的线路概念示意图。文章中的公开价格、优惠码、测速和解锁能力都标注了信息来源与“未独立复测”边界，不把第三方宣传写成本站实测。
 
